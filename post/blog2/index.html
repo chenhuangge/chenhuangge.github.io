@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <title>什么？你项目还在用Date表示时间？！ // 陈煌的Hugo博客</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.65.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://chenhuangge.github.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="什么？你项目还在用Date表示时间？！"/>
+<meta name="twitter:description" content="为啥会有这篇文章 最近接手了一个别人的老项目，拿到代码，导入IDEA的那一瞬间，我哭出了声 . . . 我瞥了一眼代码，就知道这次肯定遇到了屎山！因为"/>
+
+    <meta property="og:title" content="什么？你项目还在用Date表示时间？！" />
+<meta property="og:description" content="为啥会有这篇文章 最近接手了一个别人的老项目，拿到代码，导入IDEA的那一瞬间，我哭出了声 . . . 我瞥了一眼代码，就知道这次肯定遇到了屎山！因为" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chenhuangge.github.github.io/post/blog2/" />
+<meta property="article:published_time" content="2020-03-06T16:28:59+08:00" />
+<meta property="article:modified_time" content="2020-03-06T16:28:59+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://chenhuangge.github.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>陈煌的Hugo博客</h1>
+      <p>就是一个普普通通的博客.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">什么？你项目还在用Date表示时间？！</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Mar 6, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <p>为啥会有这篇文章
+最近接手了一个别人的老项目，拿到代码，导入IDEA的那一瞬间，我哭出了声 . . .</p>
+<p>我瞥了一眼代码，就知道这次肯定遇到了屎山！因为我看到了这种代码：</p>
+<p><img src="https://github.com/chenhuangge/wodeboke/raw/master/222/21.png" alt="login"></p>
+<p>别的先不说，我们先来看几个关于 Date用法的例子，这玩意真的好用吗？</p>
+<p>一、我想新建一个表示&quot;此刻&quot;的日期，打印出来：</p>
+<p><img src="https://github.com/chenhuangge/wodeboke/raw/master/222/22.png" alt="login"></p>
+<p>第一行：这打印结果你第一眼能看明白？可读性忒差了
+第二行：今天是2019年，你给我返回个119，没法读
+第三行：现在是12月份，你给我返回个11，这也没法读
+二、假如我再想构造一个指定年、月、日的时间，我尝试这么去做：</p>
+<p><img src="https://github.com/chenhuangge/wodeboke/raw/master/222/23.png" alt="login"></p>
+<p>你看到啥了，连构造函数都被弃用了！
+你可以再仔细瞅瞅，其实 Date里的很多方法现在都已经弃用了！</p>
+<p><img src="https://github.com/chenhuangge/wodeboke/raw/master/222/24.png" alt="login"></p>
+<p>都这样了，你项目还敢用这个吗？你醒醒吧！
+LocalDateTime不香吗？
+自 Java8开始， JDK中其实就增加了一系列表示日期和时间的新类，最典型的就是 LocalDateTime。直言不讳，这玩意的出现就是为了干掉之前 JDK版本中的 Date老哥！</p>
+<p>同样，我们也先来感受一下用法！</p>
+<p>一、获取当前此刻的时间</p>
+<p><img src="https://github.com/chenhuangge/wodeboke/raw/master/222/25.png" alt="login"></p>
+<p>线程安全性问题！
+其实上面讲来讲去只讲了两者在用法上的差别，这其实倒还好，并不致命，可是接下来要讨论的线程安全性问题才是致命的！</p>
+<p>其实以前我们惯用的 Date时间类是可变类，这就意味着在多线程环境下对共享 Date变量进行操作时，必须由程序员自己来保证线程安全！否则极有可能翻车。</p>
+<p>而自 Java8开始推出的 LocalDateTime却是线程安全的，开发人员不用再考虑并发问题，这点我们从 LocalDateTime的官方源码中即可看出：</p>
+<p><img src="https://github.com/chenhuangge/wodeboke/raw/master/222/26.jpg" alt="login"></p>
+<p>日期格式化的选择
+大家除了惯用 Date来表示时间之外，还有一个用于和 Date连用的 SimpleDateFormat 时间格式化类大家可能也戒不掉了!</p>
+<p>SimpleDateFormat最主要的致命问题也是在于它本身并不线程安全，这在它的源码注释里已然告知过了：</p>
+<p><img src="https://github.com/chenhuangge/wodeboke/raw/master/222/27.jpg" alt="login"></p>
+<p>那取而代之，我们现在改用什么呢？其实在前文已经用到啦，那就是了 DateTimeFormatter了，他也是线程安全的</p>
+<p>小声BB
+好了，说了这么多，如果你项目里还在使用 Date或者 SimpleDateFormat的话，答应我，二话别说，赶快全部偷偷去改掉，快！速度！跑步前进！</p>
+<p>转自微信公众号：CodeSheep <a href="https://mp.weixin.qq.com/s/v-Va_GuSUGr9HVAW84kloQ">https://mp.weixin.qq.com/s/v-Va_GuSUGr9HVAW84kloQ</a></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
