@@ -2,13 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>陈煌的Hugo博客</title>
-    <link>http://chenhuangge.github.io/</link>
+    <link>https://chenhuangge.github.github.io/</link>
     <description>Recent content on 陈煌的Hugo博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
+    <lastBuildDate>Fri, 06 Mar 2020 16:28:59 +0800</lastBuildDate>
     
-	<atom:link href="http://chenhuangge.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://chenhuangge.github.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>什么？你项目还在用Date表示时间？！</title>
+      <link>https://chenhuangge.github.github.io/post/blog2/</link>
+      <pubDate>Fri, 06 Mar 2020 16:28:59 +0800</pubDate>
+      
+      <guid>https://chenhuangge.github.github.io/post/blog2/</guid>
+      <description>为啥会有这篇文章 最近接手了一个别人的老项目，拿到代码，导入IDEA的那一瞬间，我哭出了声 . . . 我瞥了一眼代码，就知道这次肯定遇到了屎山！因为</description>
+    </item>
+    
+    <item>
+      <title>面试官：为什么要重写hashcode和equals方法？</title>
+      <link>https://chenhuangge.github.github.io/post/blog/</link>
+      <pubDate>Thu, 05 Mar 2020 18:48:31 +0800</pubDate>
+      
+      <guid>https://chenhuangge.github.github.io/post/blog/</guid>
+      <description>一个几乎必问的面试题 在面试 Java初级开发的时候，经常会问的一个问题是：你有没有重写过 hashcode方法？不少候选人直接说没写过。或许真的</description>
+    </item>
     
   </channel>
 </rss>
