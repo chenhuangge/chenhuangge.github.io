@@ -6,10 +6,19 @@
     <description>Recent content on 陈煌的Hugo博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 06 Mar 2020 16:28:59 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 23:32:04 +0800</lastBuildDate>
     
 	<atom:link href="https://chenhuangge.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>读书笔记《反物欲生活指南：跳出消费主义陷阱》</title>
+      <link>https://chenhuangge.github.io/post/blog3/</link>
+      <pubDate>Fri, 06 Mar 2020 23:32:04 +0800</pubDate>
+      
+      <guid>https://chenhuangge.github.io/post/blog3/</guid>
+      <description>如果消费仅仅是一种具体的行为，那么，它为什么能够上升成一种主义，一种文化，甚至一种社会意识形态？ 现状 &amp;amp; 产生机理 生产型社会，转变为【消费型社会</description>
+    </item>
     
     <item>
       <title>什么？你项目还在用Date表示时间？！</title>
