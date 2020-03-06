@@ -6,10 +6,19 @@
     <description>Recent content on 陈煌的Hugo博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 05 Mar 2020 18:48:31 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2020 16:28:59 +0800</lastBuildDate>
     
 	<atom:link href="https://chenhuangge.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>什么？你项目还在用Date表示时间？！</title>
+      <link>https://chenhuangge.github.io/post/blog2/</link>
+      <pubDate>Fri, 06 Mar 2020 16:28:59 +0800</pubDate>
+      
+      <guid>https://chenhuangge.github.io/post/blog2/</guid>
+      <description>为啥会有这篇文章 最近接手了一个别人的老项目，拿到代码，导入IDEA的那一瞬间，我哭出了声 . . . 我瞥了一眼代码，就知道这次肯定遇到了屎山！因为</description>
+    </item>
     
     <item>
       <title>面试官：为什么要重写hashcode和equals方法？</title>
