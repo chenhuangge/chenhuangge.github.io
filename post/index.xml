@@ -65,5 +65,14 @@
       <description>一个几乎必问的面试题 在面试 Java初级开发的时候，经常会问的一个问题是：你有没有重写过 hashcode方法？不少候选人直接说没写过。或许真的</description>
     </item>
     
+    <item>
+      <title>从本质上搞懂头痛的乱码问题！</title>
+      <link>https://chenhuangge.github.io/post/blog7/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://chenhuangge.github.io/post/blog7/</guid>
+      <description>很头痛的问题 字符集 和 编码无疑是IT菜鸟甚至是各种大神的头痛问题。当遇到纷繁复杂的字符集，各种火星文和乱码时，问题的定位往往变得非常困难。本文</description>
+    </item>
+    
   </channel>
 </rss>
